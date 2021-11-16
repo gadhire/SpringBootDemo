@@ -18,6 +18,7 @@ public class CustomerController {
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public Customer addCustomer(@RequestBody Customer customer) {
+		System.out.println(customer);
 		Customer saveCustomer = customerService.addCustomer(customer);
 		return saveCustomer;
 	}
